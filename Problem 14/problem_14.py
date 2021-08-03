@@ -3,7 +3,6 @@ strs = ["flower", "flow", "flight"]
 strs.sort(key=len)
 output = ""
 base = strs[0]
-l = len(base)
 letter = ""
 
 print(strs)

@@ -18,13 +18,3 @@ else :
             a += 1
     else :
         print(f"else, output is value of a: {a}")
-
-
-#for i in range(len(nums)-1) :
-   # if (nums[a] == target) :
-        #print(nums.index(target))
-        #a += 1
-        #break
-    #else :
-        #print(nums[a])
-        #a += 1
