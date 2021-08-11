@@ -1,13 +1,25 @@
 #Given two strings s and t, determine if they are isomorphic.
 
-s = "egg"
-t = "add"
+s = "paper"
+t = "title"
 
-if (len(s) == len(t)) :
-    for i in range (len(s)) :
-        
-        if (count(s[i]) > 1) :
-            
+ns = len(s)
+nt = len(t)
 
-else :
+if ns != nt:
     print("No isomorphic")
+    
+h = {}
+mt = {}
+for i in range(ns):
+    if s[i] not in h:
+        if t[i] not in mt:
+            h[s[i]] = t[i]
+            mt[t[i]] = s[i]
+        else:
+            print("No isomorphic")
+    elif h[s[i]] != t[i]:
+        print("No isomorphic")
+    
+    else :
+        print("Isomorphic")
