@@ -3,22 +3,24 @@
 
 nums = [0,1,2,4,5,7]
 
+class Object :
+    def summaryRanges(self, nums):
+        if not nums:
+            print([])
+        res, i, start = [], 0, 0
+        while i < len(nums)-1:
+            if nums[i]+1 != nums[i+1]:
+                res.append(self.printRange(nums[start], nums[i]))
+                start = i+1
+            i += 1
+        res.append(self.printRange(nums[start], nums[i]))
+        print(res)
 
-def summaryRanges(self, nums):
-    if not nums:
-        print([])
-    res, i, start = [], 0, 0
-    while i < len(nums)-1:
-        if nums[i]+1 != nums[i+1]:
-            res.append(self.printRange(nums[start], nums[i]))
-            start = i+1
-        i += 1
-    res.append(self.printRange(nums[start], nums[i]))
-    print(res)
-
-def printRange(self, l, r):
-    if l == r:
-        return str(l)
-    else:
-        return str(l) + "->" + str(r)
+    def printRange(self, l, r):
+        if l == r:
+            return str(l)
+        else:
+            return str(l) + "->" + str(r)
+    
+    summaryRanges(self, nums)
 
