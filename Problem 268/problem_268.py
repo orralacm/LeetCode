@@ -3,9 +3,10 @@
 nums = [3,0,1]
 
 nums.sort()
+print(nums)
 
 for i in range (len(nums)-1) :
     if (nums[i+1] - nums[i] != 1) :
-        print(f"Missing number is: {nums[i]}")
+        print(f"Missing number is: {nums[i]+1}")
     else :
         continue
