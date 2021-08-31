@@ -5,7 +5,6 @@ n = 27
 
 while n > 2:
     if n % 3 > 0 :
-        print("False")
         break
     n /= 3
 print(f"{n == 1}")
