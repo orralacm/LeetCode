@@ -6,12 +6,13 @@ s = "abcd"
 t = "abcde"
 
 dic = {}
-print(dic)
 
 for ch in s:
     dic[ch] = dic.get(ch, 0) + 1
     print(dic)
+    print(ch)
 for ch in t:
+    print(ch)
     if dic.get(ch, 0) == 0:
         print(ch)
     else:
